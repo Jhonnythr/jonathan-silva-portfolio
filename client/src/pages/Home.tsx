@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import {
   Activity,
   ArrowDown,
@@ -101,11 +101,8 @@ const processSteps = [
 ];
 
 function MMark({ size = "text-[11rem]", className = "" }: { size?: string; className?: string }) {
-  return (
-    <svg aria-label="M — assinatura pessoal" role="img" viewBox="0 0 245 178" className={`majin-mark ${size} ${className}`}>
-      <path fill="currentColor" d="M11.8 104.5c-4.9 12.9-3.1 34.2 8.4 42.4 7.3 5.2 16.2 2.8 21.2-5.1 7.4-11.7 5.2-34.7 2.3-56.3L37 18.3c32.8 22.9 61 58.5 85.5 110.2C147 76.8 175.2 41.2 208 18.3l-6.7 67.2c-2.9 21.6-5.1 44.6 2.3 56.3 5 7.9 13.9 10.3 21.2 5.1 11.5-8.2 13.3-29.5 8.4-42.4-2.8 9.4-7.7 14.7-13.3 14-8.6-1.1-8.2-14.8-6.4-31.5l7.3-72.7C181 36.8 149.8 74.2 122.5 128.7 95.2 74.2 64 36.8 24.2 14.3l7.3 72.7c1.8 16.7 2.2 30.4-6.4 31.5-5.6.7-10.5-4.6-13.3-14Z" />
-    </svg>
-  );
+  const mask = "url(/manus-storage/majin-symbol-transparent_9b63020e.png)";
+  return <span aria-label="M — assinatura pessoal" role="img" className={`majin-mark ${size} ${className}`} style={{ WebkitMaskImage: mask, maskImage: mask } as CSSProperties} />;
 }
 
 function SectionHeading({ index, eyebrow, title, copy }: { index: string; eyebrow: string; title: string; copy?: string }) {

@@ -138,9 +138,7 @@
   .text-gradient { background: linear-gradient(110deg, #fff 8%, #e7c8ff 48%, #8f8cff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .glass { background: linear-gradient(135deg, oklch(1 0 0 / 8%), oklch(1 0 0 / 2%)); border: 1px solid oklch(1 0 0 / 12%); box-shadow: 0 24px 80px oklch(0 0 0 / 22%); backdrop-filter: blur(18px); }
   .line-grid { background-image: linear-gradient(90deg, oklch(1 0 0 / 9%) 1px, transparent 1px), linear-gradient(oklch(1 0 0 / 9%) 1px, transparent 1px); background-size: 36px 36px; }
-  .majin-mark { position: relative; display: inline-grid; place-items: center; font-family: "Space Grotesk", sans-serif; font-weight: 700; line-height: .8; letter-spacing: -.15em; color: transparent; -webkit-text-stroke: 1px oklch(0.93 0.01 90 / 78%); text-shadow: 0 0 30px oklch(0.84 0.19 328 / 24%); transform: skew(-7deg); }
-  .majin-mark::before { content: ""; position: absolute; width: 22%; height: 7%; top: -2%; left: 39%; background: oklch(0.84 0.19 328); box-shadow: 0 0 18px oklch(0.84 0.19 328 / 65%); opacity: .9; }
-  .majin-mark::after { content: ""; position: absolute; inset: 10% 26% 8%; border: 1px solid oklch(0.84 0.19 328 / 35%); transform: skew(7deg); pointer-events: none; }
+  .majin-mark { position: relative; display: inline-block; width: 1.376em; height: 1em; flex: 0 0 auto; color: oklch(0.93 0.01 90); filter: drop-shadow(0 0 18px oklch(0.84 0.19 328 / 28%)); transform: translateZ(0); }
   .hero-orbit { position: absolute; width: min(56vw, 780px); aspect-ratio: 1; border: 1px solid oklch(1 0 0 / 10%); border-radius: 50%; transform: rotate(-18deg); }
   .hero-orbit::before, .hero-orbit::after { content: ""; position: absolute; border-radius: 999px; background: oklch(0.84 0.19 328); box-shadow: 0 0 20px oklch(0.84 0.19 328 / 70%); }
   .hero-orbit::before { width: 7px; height: 7px; top: 15%; left: 12%; }

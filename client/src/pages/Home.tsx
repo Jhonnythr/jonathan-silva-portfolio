@@ -181,7 +181,7 @@ export default function Home() {
       <header className={`fixed left-0 right-0 top-0 z-40 transition-all duration-300 ${scrolled ? "border-b border-white/10 bg-[#080808]/80 backdrop-blur-xl" : "bg-transparent"}`}>
         <div className="container flex h-20 items-center justify-between">
           <button onClick={() => go("top")} className="group flex items-center gap-3 text-left" aria-label="Voltar ao topo">
-            <span className="grid h-9 w-9 place-items-center rounded border border-white/20 bg-white/[.04] p-1.5 transition group-hover:border-fuchsia-300/60"><MMark size="text-[1.7rem]" className="text-fuchsia-200" /></span>
+            <span className="grid h-9 w-9 place-items-center rounded border border-white/20 bg-white/[.04] p-1.5 transition group-hover:border-fuchsia-300/60"><MMark size="text-[1.15rem]" className="text-fuchsia-200" /></span>
             <span className="hidden font-mono text-[10px] uppercase tracking-[.2em] text-white/70 sm:block">Jonathan Silva</span>
           </button>
           <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">

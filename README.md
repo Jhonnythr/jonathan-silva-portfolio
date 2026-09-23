@@ -28,7 +28,7 @@ O site conecta três áreas que fazem parte dessa trajetória:
 - automação;
 - Departamento Pessoal.
 
-O símbolo **M**, inspirado na assinatura visual do Majin, aparece como um elemento recorrente da identidade do projeto.
+
 
 ## Projetos apresentados
 
@@ -55,7 +55,6 @@ EXCEL → MAPEAMENTO → PROCESSAMENTO → TXT
 ## Destaques da experiência
 
 - Hero com mensagem de posicionamento pessoal;
-- símbolo M aplicado como assinatura visual;
 - loading inicial com possibilidade de pular a introdução;
 - navegação responsiva para desktop e mobile;
 - microinterações e animações suaves;

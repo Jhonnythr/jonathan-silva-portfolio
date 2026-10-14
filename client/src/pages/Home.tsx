@@ -124,7 +124,7 @@ function ProjectVisual({ project }: { project: Project }) {
       <div className="absolute left-5 top-5 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[.22em] text-white/35"><Circle className="h-2 w-2 fill-fuchsia-300 text-fuchsia-300" /> system / preview</div>
       <div className="absolute inset-0 grid place-items-center">
         {project.id === "calculadp" ? (
-          <img src="/manus-storage/pasted_file_KXe5Sh_image_9f2c64b1.png" alt="Tela inicial da plataforma CalculaDP" className="absolute inset-0 h-full w-full object-cover object-top opacity-85 transition duration-500 group-hover:scale-[1.03]" />
+          <img src="/__manus_/jonathan-hero-texture_ea3a9e95.png" alt="Tela inicial da plataforma CalculaDP" className="absolute inset-0 h-full w-full object-cover object-top opacity-85 transition duration-500 group-hover:scale-[1.03]" />
         ) : project.id === "nasajon" ? (
           <div className="flex items-center gap-2 font-mono text-xs text-white/80 sm:gap-4 sm:text-sm">
             {["EXCEL", "MAP", "PROC", "TXT"].map((item, index) => <span key={item} className="flex items-center gap-2"><span className="rounded border border-white/20 bg-black/25 px-2 py-1">{item}</span>{index < 3 && <MoveRight className="h-3 w-3 text-fuchsia-300" />}</span>)}
@@ -192,7 +192,7 @@ export default function Home() {
 
       <main ref={contentRef}>
         <section id="top" className="relative flex min-h-[780px] items-end overflow-hidden pb-16 pt-36 sm:min-h-screen sm:pb-24">
-          <img src="/manus-storage/jonathan-texture_ea3a9e95.png" alt="Textura abstrata escura com linhas técnicas" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35 mix-blend-screen" />
+          <img src="/__manus__/jonathan-texture_ea3a9e95.png" alt="Textura abstrata escura com linhas técnicas" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-35 mix-blend-screen" />
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_35%,rgba(137,73,255,.16),transparent_28%),linear-gradient(90deg,#080808_0%,rgba(8,8,8,.86)_45%,rgba(8,8,8,.36)_100%)]" />
           <div className="orbit animate-orbit -right-[24%] top-[10%] hidden opacity-50 lg:block" style={{ transform: `translate(${mouse.x * -12}px, ${mouse.y * -8}px) rotate(-18deg)` }} />
           <div className="absolute right-[16%] top-[20%] hidden font-mono text-[10px] uppercase tracking-[.26em] text-white/25 lg:block">signature / 01</div>

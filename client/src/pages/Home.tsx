@@ -73,23 +73,6 @@ const projects: Project[] = [
     ],
   },
   {
-    id: "casa-na-barra",
-    number: "04",
-    name: "CASA NA BARRA IMÓVEIS",
-    category: "REAL ESTATE / COMMERCIAL WEBSITE",
-    description: "Meu primeiro site desenvolvido e vendido: uma plataforma para a imobiliária publicar imóveis disponíveis para venda e locação.",
-    tags: ["IMOBILIÁRIA", "IMÓVEIS", "VENDA", "LOCAÇÃO"],
-    accent: "violet",
-    icon: PanelTop,
-    details: [
-      { label: "Contexto", text: "Foi o primeiro site que desenvolvi e vendi, marcando o início da minha experiência com projetos comerciais." },
-      { label: "Objetivo", text: "Criar um espaço digital para a imobiliária apresentar imóveis disponíveis para venda e locação." },
-      { label: "Solução", text: "Um site institucional com navegação para Home, Imóveis, Sobre e Contato, além de uma apresentação visual dos imóveis." },
-      { label: "Status", text: "Finalizado." },
-      { label: "Processo", text: "Desenvolvido sem nenhuma inteligência artificial envolvida, usando apenas meu conhecimento e as habilidades que eu tinha na época." },
-    ],
-  },
-  {
     id: "nasajon",
     number: "03",
     name: "AUTOMAÇÃO NASAJON",
@@ -105,6 +88,23 @@ const projects: Project[] = [
       { label: "Saída", text: "Geração de um arquivo TXT estruturado para importação." },
       { label: "Tela inicial", text: "A interface permite selecionar a planilha, identificar colunas, definir a matrícula e o salário base e mapear códigos por coluna." },
       { label: "Evolução", text: "Espaço reservado para registrar a evolução futura da ferramenta." },
+    ],
+  },
+  {
+    id: "casa-na-barra",
+    number: "04",
+    name: "CASA NA BARRA IMÓVEIS",
+    category: "REAL ESTATE / COMMERCIAL WEBSITE",
+    description: "Meu primeiro site desenvolvido e vendido: uma plataforma para a imobiliária publicar imóveis disponíveis para venda e locação.",
+    tags: ["IMOBILIÁRIA", "IMÓVEIS", "VENDA", "LOCAÇÃO"],
+    accent: "violet",
+    icon: PanelTop,
+    details: [
+      { label: "Contexto", text: "Foi o primeiro site que desenvolvi e vendi, marcando o início da minha experiência com projetos comerciais." },
+      { label: "Objetivo", text: "Criar um espaço digital para a imobiliária apresentar imóveis disponíveis para venda e locação." },
+      { label: "Solução", text: "Um site institucional com navegação para Home, Imóveis, Sobre e Contato, além de uma apresentação visual dos imóveis." },
+      { label: "Status", text: "Finalizado." },
+      { label: "Processo", text: "Desenvolvido sem nenhuma inteligência artificial envolvida, usando apenas meu conhecimento e as habilidades que eu tinha na época." },
     ],
   },
 ];
@@ -246,7 +246,7 @@ export default function Home() {
         <section id="projetos" className="container py-28 sm:py-40">
           <div className="reveal"><SectionHeading index="02" eyebrow="Selected projects" title="Projetos que estou construindo." copy="Cada sistema nasce de uma necessidade concreta — e cresce com o uso." /></div>
           <div className="grid gap-5 lg:grid-cols-12">
-            {projects.map((project, index) => <article key={project.id} className={`project-card reveal glass rounded-2xl p-5 sm:p-7 ${index === 0 ? "lg:col-span-7" : index === 1 ? "lg:col-span-5 lg:mt-20" : "lg:col-span-8 lg:col-start-3"}`} style={{ transitionDelay: `${index * 80}ms` }}><div className="mb-6 flex items-center justify-between"><span className="font-mono text-xs text-fuchsia-200/70">{project.number} / 03</span><span className="font-mono text-[9px] uppercase tracking-[.18em] text-white/35">{project.category}</span></div><ProjectVisual project={project} /><div className="flex items-end justify-between gap-5"><div><h3 className="font-display text-3xl font-medium tracking-[-.07em] text-white sm:text-4xl">{project.name}</h3><p className="mt-4 max-w-lg text-sm leading-6 text-white/50">{project.description}</p><div className="mt-5 flex flex-wrap gap-2">{project.tags.map((tag) => <span key={tag} className="rounded-full border border-white/10 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[.12em] text-white/45">{tag}</span>)}</div></div><button onClick={() => setActiveProject(project)} className="group grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/15 transition hover:border-fuchsia-300 hover:bg-fuchsia-300 hover:text-black" aria-label={`Abrir detalhes de ${project.name}`}><ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></button></div></article>)}
+            {projects.map((project, index) => <article key={project.id} className={`project-card reveal glass rounded-2xl p-5 sm:p-7 ${index === 0 ? "lg:col-span-7" : index === 1 ? "lg:col-span-5 lg:mt-20" : index === 2 ? "lg:col-span-5" : "lg:col-span-7 lg:col-start-6 lg:mt-20"}`} style={{ transitionDelay: `${index * 80}ms` }}><div className="mb-6 flex items-center justify-between"><span className="font-mono text-xs text-fuchsia-200/70">{project.number} / 04</span><span className="font-mono text-[9px] uppercase tracking-[.18em] text-white/35">{project.category}</span></div><ProjectVisual project={project} /><div className="flex items-end justify-between gap-5"><div><h3 className="font-display text-3xl font-medium tracking-[-.07em] text-white sm:text-4xl">{project.name}</h3><p className="mt-4 max-w-lg text-sm leading-6 text-white/50">{project.description}</p><div className="mt-5 flex flex-wrap gap-2">{project.tags.map((tag) => <span key={tag} className="rounded-full border border-white/10 px-2.5 py-1 font-mono text-[9px] uppercase tracking-[.12em] text-white/45">{tag}</span>)}</div></div><button onClick={() => setActiveProject(project)} className="group grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/15 transition hover:border-fuchsia-300 hover:bg-fuchsia-300 hover:text-black" aria-label={`Abrir detalhes de ${project.name}`}><ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" /></button></div></article>)}
           </div>
         </section>
 

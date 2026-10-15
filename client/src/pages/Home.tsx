@@ -72,6 +72,23 @@ const projects: Project[] = [
     ],
   },
   {
+    id: "casa-na-barra",
+    number: "04",
+    name: "CASA NA BARRA IMÓVEIS",
+    category: "REAL ESTATE / COMMERCIAL WEBSITE",
+    description: "Meu primeiro site desenvolvido e vendido: uma plataforma para a imobiliária publicar imóveis disponíveis para venda e locação.",
+    tags: ["IMOBILIÁRIA", "IMÓVEIS", "VENDA", "LOCAÇÃO"],
+    accent: "violet",
+    icon: PanelTop,
+    details: [
+      { label: "Contexto", text: "Foi o primeiro site que desenvolvi e vendi, marcando o início da minha experiência com projetos comerciais." },
+      { label: "Objetivo", text: "Criar um espaço digital para a imobiliária apresentar imóveis disponíveis para venda e locação." },
+      { label: "Solução", text: "Um site institucional com navegação para Home, Imóveis, Sobre e Contato, além de uma apresentação visual dos imóveis." },
+      { label: "Status", text: "Finalizado." },
+      { label: "Processo", text: "Desenvolvido sem nenhuma inteligência artificial envolvida, usando apenas meu conhecimento e as habilidades que eu tinha na época." },
+    ],
+  },
+  {
     id: "nasajon",
     number: "03",
     name: "AUTOMAÇÃO NASAJON",
@@ -124,6 +141,8 @@ function ProjectVisual({ project }: { project: Project }) {
       <div className="absolute inset-0 grid place-items-center">
         {project.id === "calculadp" ? (
           <img src="/assets/calculadp-home.png" alt="Tela inicial da plataforma CalculaDP" className="absolute inset-0 h-full w-full object-cover object-top opacity-85 transition duration-500 group-hover:scale-[1.03]" />
+        ) : project.id === "casa-na-barra" ? (
+          <img src="/assets/casa-na-barra-imoveis.png" alt="Tela inicial do site Casa na Barra Imóveis" className="absolute inset-0 h-full w-full object-cover object-top opacity-90 transition duration-500 group-hover:scale-[1.03]" />
         ) : project.id === "nasajon" ? (
           <div className="flex items-center gap-2 font-mono text-xs text-white/80 sm:gap-4 sm:text-sm">
             {["EXCEL", "MAP", "PROC", "TXT"].map((item, index) => <span key={item} className="flex items-center gap-2"><span className="rounded border border-white/20 bg-black/25 px-2 py-1">{item}</span>{index < 3 && <MoveRight className="h-3 w-3 text-fuchsia-300" />}</span>)}
@@ -238,7 +257,7 @@ export default function Home() {
 
       <footer className="border-t border-white/10 py-8"><div className="container flex flex-col gap-5 text-xs text-white/35 sm:flex-row sm:items-center sm:justify-between"><div className="flex items-center gap-3"><MMark size="text-[1.4rem]" className="text-fuchsia-200" /><span>Jonathan Silva</span></div><span className="font-mono text-[9px] uppercase tracking-[.18em]">Technology · Automation · Department Personnel</span><span className="font-mono text-[9px] uppercase tracking-[.14em]">Built by Jonathan Silva.</span></div></footer>
 
-      {activeProject && <div className="modal-backdrop fixed inset-0 z-50 overflow-y-auto bg-black/75 p-4 backdrop-blur-md sm:p-8" role="dialog" aria-modal="true" aria-label={`Detalhes do projeto ${activeProject.name}`} onClick={() => setActiveProject(null)}><div className="modal-panel glass mx-auto my-8 max-w-3xl rounded-2xl p-6 sm:my-14 sm:p-10" onClick={(event) => event.stopPropagation()}><div className="mb-12 flex items-start justify-between gap-6"><div><p className="eyebrow mb-4">project file / {activeProject.number}</p><h2 className="font-display text-4xl tracking-[-.07em] text-white sm:text-6xl">{activeProject.name}</h2><p className="mt-3 font-mono text-[10px] uppercase tracking-[.17em] text-fuchsia-200/70">{activeProject.category}</p></div><button onClick={() => setActiveProject(null)} className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/15 text-white/60 transition hover:border-white/60 hover:text-white" aria-label="Fechar detalhes"><X className="h-4 w-4" /></button></div>{activeProject.id === "calculadp" && <div className="mb-8 overflow-hidden rounded-xl border border-white/10 bg-white"><img src="/assets/calculadp-home.png" alt="Tela inicial da plataforma CalculaDP" className="h-auto w-full" /></div>}<div className="grid gap-0">{activeProject.details.map((detail, index) => <div key={detail.label} className="grid gap-3 border-t border-white/10 py-5 sm:grid-cols-[150px_1fr]"><span className="font-mono text-[10px] uppercase tracking-[.18em] text-fuchsia-200/65">{String(index + 1).padStart(2, "0")} / {detail.label}</span><p className="text-sm leading-7 text-white/60">{detail.text}</p></div>)}</div><div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6 font-mono text-[10px] uppercase tracking-[.16em] text-white/30"><ScanLine className="h-4 w-4 text-fuchsia-200/70" /> Mais detalhes e imagens serão adicionados conforme o projeto evoluir.</div></div></div>}
+      {activeProject && <div className="modal-backdrop fixed inset-0 z-50 overflow-y-auto bg-black/75 p-4 backdrop-blur-md sm:p-8" role="dialog" aria-modal="true" aria-label={`Detalhes do projeto ${activeProject.name}`} onClick={() => setActiveProject(null)}><div className="modal-panel glass mx-auto my-8 max-w-3xl rounded-2xl p-6 sm:my-14 sm:p-10" onClick={(event) => event.stopPropagation()}><div className="mb-12 flex items-start justify-between gap-6"><div><p className="eyebrow mb-4">project file / {activeProject.number}</p><h2 className="font-display text-4xl tracking-[-.07em] text-white sm:text-6xl">{activeProject.name}</h2><p className="mt-3 font-mono text-[10px] uppercase tracking-[.17em] text-fuchsia-200/70">{activeProject.category}</p></div><button onClick={() => setActiveProject(null)} className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/15 text-white/60 transition hover:border-white/60 hover:text-white" aria-label="Fechar detalhes"><X className="h-4 w-4" /></button></div>{activeProject.id === "calculadp" && <div className="mb-8 overflow-hidden rounded-xl border border-white/10 bg-white"><img src="/assets/calculadp-home.png" alt="Tela inicial da plataforma CalculaDP" className="h-auto w-full" /></div>}{activeProject.id === "casa-na-barra" && <div className="mb-8 overflow-hidden rounded-xl border border-white/10 bg-white"><img src="/assets/casa-na-barra-imoveis.png" alt="Tela inicial do site Casa na Barra Imóveis" className="h-auto w-full" /></div>}<div className="grid gap-0">{activeProject.details.map((detail, index) => <div key={detail.label} className="grid gap-3 border-t border-white/10 py-5 sm:grid-cols-[150px_1fr]"><span className="font-mono text-[10px] uppercase tracking-[.18em] text-fuchsia-200/65">{String(index + 1).padStart(2, "0")} / {detail.label}</span><p className="text-sm leading-7 text-white/60">{detail.text}</p></div>)}</div><div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6 font-mono text-[10px] uppercase tracking-[.16em] text-white/30"><ScanLine className="h-4 w-4 text-fuchsia-200/70" /> Mais detalhes e imagens serão adicionados conforme o projeto evoluir.</div></div></div>}
     </div>
   );
 }

@@ -179,7 +179,7 @@ export default function Home() {
         <div className="container flex h-20 items-center justify-between">
           <button onClick={() => go("top")} className="group flex items-center gap-3 text-left" aria-label="Voltar ao topo">
             <span className="grid h-9 w-9 place-items-center rounded border border-white/20 bg-white/[.04] p-1.5 transition group-hover:border-fuchsia-300/60"><MMark size="text-[1.15rem]" className="text-fuchsia-200" /></span>
-            <span className="hidden font-mono text-[10px] uppercase tracking-[.2em] text-white/70 sm:block">Jonathan Silva</span>
+            <span className="hidden font-mono text-[10px] uppercase tracking-[.2em] text-white/70 sm:block">Jonathan Silva | Portfólio</span>
           </button>
           <nav className="hidden items-center gap-8 md:flex" aria-label="Navegação principal">
             {["sobre", "projetos", "experiencia", "contato"].map((item) => <button key={item} onClick={() => go(item)} className="nav-link font-mono text-[10px] uppercase tracking-[.2em]">{item}</button>)}
